@@ -869,10 +869,11 @@ button.active {
 .All-Products {
   width: 1170px;
   height: 56px;
-  border-bottom: black solid 0.5px;
-  margin-bottom: 12px;
+  margin-top: 28px;
   padding-bottom: 60px;
   margin-left: 135px;
+
+
 }
 
 .All-Products button {
@@ -886,7 +887,7 @@ button.active {
   margin-left: 468px;
   border-radius: 5px;
   border: none;
-
+  cursor: pointer;
 }
 
 .Categories {
@@ -895,7 +896,8 @@ button.active {
   height: 313px;
   margin-left: 135px;
   flex-direction: column;
-  margin-top: 80px;
+  padding-top: 75px;
+  border-top: solid black 0.5px;
 
 }
 
@@ -1290,6 +1292,7 @@ button.active {
   flex-direction: column;
 
 
+
 }
 
 .our-Products-conteiner {
@@ -1418,9 +1421,35 @@ button.active {
   justify-content: center;
 }
 
-.View-All-Products {
-  display: flex;
-  align-items: center;
+.Color-product div {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Color-product div.active {
+  border: solid green;
+  /* Обводка кружком */
+  transform: scale(1);
+  /* Уменьшение размера */
+}
+
+.color-jacet-black {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.color-jacet-red {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  cursor: pointer;
 
 }

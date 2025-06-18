@@ -1,6 +1,6 @@
 
 // Селектор для счетчика "избранное"
-const heardCounter = document.querySelector('.heard span'); 
+const heardCounter = document.querySelector('.heard span');
 let heardCount = 0; // Начальное значение счетчика
 
 // Обработка кликов на кнопках "избранное"
@@ -23,7 +23,7 @@ heardButtons.forEach(button => {
 });
 
 // Селектор для счетчика "корзина"
-const cartCounter = document.querySelector('.cart span'); 
+const cartCounter = document.querySelector('.cart span');
 let cartCount = 0; // Начальное значение счетчика
 
 // Обработка кликов на кнопках "корзина"
@@ -156,30 +156,30 @@ const next2Button = document.querySelector('.next2');
 let currentSlideIndex = 0;
 
 function showCategorySlide(index) {
-  
-  // Удаляем класс active у всех кнопок
-  categoriesSlide.forEach(slide => slide.querySelector('.categories-item').classList.remove('active'));
 
-  // Добавляем класс active текущему слайду
-  const currentButton = categoriesSlide[index].querySelector('.categories-item');
-  currentButton.classList.add('active');
+    // Удаляем класс active у всех кнопок
+    categoriesSlide.forEach(slide => slide.querySelector('.categories-item').classList.remove('active'));
+
+    // Добавляем класс active текущему слайду
+    const currentButton = categoriesSlide[index].querySelector('.categories-item');
+    currentButton.classList.add('active');
 }
 
 // Обработчики событий для кнопок переключения
 prev2Button.addEventListener('click', () => {
-  currentSlideIndex--;
-  if (currentSlideIndex < 0) {
-    currentSlideIndex = categoriesSlide.length - 1;
-  }
-  showCategorySlide(currentSlideIndex);
+    currentSlideIndex--;
+    if (currentSlideIndex < 0) {
+        currentSlideIndex = categoriesSlide.length - 1;
+    }
+    showCategorySlide(currentSlideIndex);
 });
 
 next2Button.addEventListener('click', () => {
-  currentSlideIndex++;
-  if (currentSlideIndex >= categoriesSlide.length) {
-    currentSlideIndex = 0;
-  }
-  showCategorySlide(currentSlideIndex);
+    currentSlideIndex++;
+    if (currentSlideIndex >= categoriesSlide.length) {
+        currentSlideIndex = 0;
+    }
+    showCategorySlide(currentSlideIndex);
 });
 
 // Инициализация
@@ -238,7 +238,7 @@ function showOurSlide(index) {
 prev3Button.addEventListener('click', () => {
     currentOurSlideIndex--;
     if (currentOurSlideIndex < 0) {
-        currentOurSlideIndex = OurSlides.length - 1; // Возвращаемся к последнему слайду
+        currentOurSlideIndex = 3; // Возвращаемся к 4-му слайду (индекс 3)
     }
     showOurSlide(currentOurSlideIndex);
 });
@@ -246,7 +246,7 @@ prev3Button.addEventListener('click', () => {
 // Обработчик для кнопки "Вперед"
 next3Button.addEventListener('click', () => {
     currentOurSlideIndex++;
-    if (currentOurSlideIndex >= OurSlides.length) {
+    if (currentOurSlideIndex > 3) {
         currentOurSlideIndex = 0; // Возвращаемся к первому слайду
     }
     showOurSlide(currentOurSlideIndex);
@@ -254,3 +254,30 @@ next3Button.addEventListener('click', () => {
 
 // Инициализация
 showOurSlide(currentOurSlideIndex);
+
+// Выбор элементов цвета
+const colorOptions = document.querySelectorAll('.Color-product div');
+const productImage = document.querySelector('.our-products-item img'); // Измените селектор на нужный
+
+// Карта цветов и соответствующих изображений
+const colorMap = {
+    'color-jacet-black': 'img.svg/698717_Z8A1X_3475_001_100_0000_Light-Reversible-quilted-satin-jacket 1.svg',
+    'color-jacet-red': 'img.svg/GP11_PRD3 1.svg'
+};
+
+// Добавление обработчиков событий для изменения цвета продукта
+colorOptions.forEach(colorOption => {
+    colorOption.addEventListener('click', () => {
+        // Удаляем класс active у всех элементов
+        colorOptions.forEach(option => option.classList.remove('active'));
+
+        // Добавляем класс active к текущему элементу
+        colorOption.classList.add('active');
+
+        // Изменяем изображение продукта
+        const colorClass = colorOption.classList[0]; // Получаем класс элемента
+        if (colorMap[colorClass]) {
+            productImage.src = colorMap[colorClass]; // Устанавливаем изображение на основе карты
+        }
+    });
+});
