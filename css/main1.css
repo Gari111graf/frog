@@ -1392,7 +1392,8 @@ button.active {
   /* Плавное появление */
 }
 
-.our-products-slides.active .add-to-cart {
+.our-products-slides,
+.active .add-to-cart {
   opacity: 1;
   /* Показываем кнопку, если слайд активен */
 }
@@ -1400,12 +1401,15 @@ button.active {
 .our-products-slides.active {
   transform: scale(1.1);
   /* Увеличение активного слайда */
-
   z-index: 2;
   /* Поверх других слайдов */
 }
 
-.our-products-item {
+.our-products-item,
+.our-products-item1,
+.our-products-item2,
+.our-products-item3,
+.our-products-item4 {
   width: 270px;
   height: 250px;
   background-color: #ccc;
@@ -1413,7 +1417,11 @@ button.active {
   display: flex;
 }
 
-.our-products-item a {
+.our-products-item,
+.our-products-item1,
+.our-products-item2,
+.our-products-item3,
+.our-products-item4 a {
   width: 270px;
   height: 250px;
   display: flex;
@@ -1421,23 +1429,53 @@ button.active {
   justify-content: center;
 }
 
-.Color-product div {
+.Color-product1 div,
+.Color-product2 div,
+.Color-product3 div,
+.Color-product4 div {
   width: 20px;
   height: 20px;
   border-radius: 50%;
   display: inline-block;
-
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.Color-product div.active {
+.Color-product1 div.active {
   border: solid green;
   /* Обводка кружком */
   transform: scale(1);
   /* Уменьшение размера */
 }
 
-.color-jacet-black {
+.Color-product2 div.active {
+  border: solid green;
+  /* Обводка кружком */
+  transform: scale(1);
+  /* Уменьшение размера */
+}
+
+.Color-product3 div.active {
+  border: solid green;
+  /* Обводка кружком */
+  transform: scale(1);
+  /* Уменьшение размера */
+
+
+}
+
+.Color-product4 div.active {
+  border: solid green;
+  /* Обводка кружком */
+  transform: scale(1);
+  /* Уменьшение размера */
+}
+
+
+
+.color-mercedes-black,
+.color-boots-black,
+.color-joystik-black,
+.color-coat-black {
   width: 20px;
   height: 20px;
   background-color: black;
@@ -1445,7 +1483,10 @@ button.active {
   cursor: pointer;
 }
 
-.color-jacet-red {
+.color-mercedes-red,
+.color-boots-red,
+.color-joystik-red,
+.color-coat-red {
   width: 20px;
   height: 20px;
   background-color: red;

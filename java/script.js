@@ -255,29 +255,67 @@ next3Button.addEventListener('click', () => {
 // Инициализация
 showOurSlide(currentOurSlideIndex);
 
-// Выбор элементов цвета
-const colorOptions = document.querySelectorAll('.Color-product div');
-const productImage = document.querySelector('.our-products-item img'); // Измените селектор на нужный
+//Color Product
 
-// Карта цветов и соответствующих изображений
-const colorMap = {
-    'color-jacet-black': 'img.svg/698717_Z8A1X_3475_001_100_0000_Light-Reversible-quilted-satin-jacket 1.svg',
-    'color-jacet-red': 'img.svg/GP11_PRD3 1.svg'
-};
+// Общая функция для обработки смены цвета продукта
+function setupColorChange(colorOptionsSelector, productImageSelector, colorMap) {
+    const colorOptions = document.querySelectorAll(colorOptionsSelector);
+    const productImage = document.querySelector(productImageSelector);
 
-// Добавление обработчиков событий для изменения цвета продукта
-colorOptions.forEach(colorOption => {
-    colorOption.addEventListener('click', () => {
-        // Удаляем класс active у всех элементов
-        colorOptions.forEach(option => option.classList.remove('active'));
+    colorOptions.forEach(colorOption => {
+        colorOption.addEventListener('click', () => {
+            // Удаляем класс active у всех элементов
+            colorOptions.forEach(option => option.classList.remove('active'));
 
-        // Добавляем класс active к текущему элементу
-        colorOption.classList.add('active');
+            // Добавляем класс active к текущему элементу
+            colorOption.classList.add('active');
 
-        // Изменяем изображение продукта
-        const colorClass = colorOption.classList[0]; // Получаем класс элемента
-        if (colorMap[colorClass]) {
-            productImage.src = colorMap[colorClass]; // Устанавливаем изображение на основе карты
-        }
+            // Изменяем изображение продукта
+            const colorClass = colorOption.classList[0]; // Получаем класс элемента
+            if (colorMap[colorClass]) {
+                productImage.src = colorMap[colorClass]; // Устанавливаем изображение на основе карты
+            }
+        });
     });
+}
+
+// Настройка для всех продуктов
+const productsConfig = [
+    {
+        colorOptionsSelector: '.Color-product1 div',
+        productImageSelector: '.our-products-item1 img',
+        colorMap: {
+            'color-mercedes-black': 'img.svg/698717_Z8A1X_3475_001_100_0000_Light-Reversible-quilted-satin-jacket 1.svg',
+            'color-mercedes-red': 'img.svg/GP11_PRD3 1.svg'
+        }
+    },
+    {
+        colorOptionsSelector: '.Color-product2 div',
+        productImageSelector: '.our-products-item2 img',
+        colorMap: {
+            'color-boots-black': 'img.svg/Copa_Sense 1.svg',
+            'color-boots-red': 'img.svg/GP11_PRD3 1.svg'
+        }
+    },
+    {
+        colorOptionsSelector: '.Color-product3 div',
+        productImageSelector: '.our-products-item3 img',
+        colorMap: {
+            'color-joystik-black': 'img.svg/Copa_Sense 1.svg',
+            'color-joystik-red': 'img.svg/GP11_PRD3 1.svg'
+        }
+    },
+    {
+        colorOptionsSelector: '.Color-product4 div',
+        productImageSelector: '.our-products-item4 img',
+        colorMap: {
+            'color-coat-black': 'img.svg/Copa_Sense 1.svg',
+            'color-coat-red': 'img.svg/GP11_PRD3 1.svg'
+        }
+    }
+];
+
+// Инициализация смены цвета для всех продуктов
+productsConfig.forEach(config => {
+    setupColorChange(config.colorOptionsSelector, config.productImageSelector, config.colorMap);
 });
