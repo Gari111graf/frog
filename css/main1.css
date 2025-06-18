@@ -1,0 +1,1426 @@
+@import url('https://fonts.googleapis.com/css2?family=Mogra&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+
+  margin: 0;
+  padding: 0;
+}
+
+.Top-heder {
+
+  display: flex;
+  /* Располагает элементы в строку */
+  justify-content: space-between;
+  /* Разделяет элементы по краям */
+  align-items: center;
+  /* Центрирует элементы по вертикали */
+  width: 1440px;
+  /* Занимает всю ширину */
+  height: 48px;
+  /* Высота блока */
+  background-color: black;
+  /* Цвет фона */
+}
+
+.sale {
+
+
+  display: flex;
+  /* Располагает элементы в строку */
+  justify-content: center;
+  /* Центрирует элементы по горизонтали */
+  align-items: center;
+  /* Центрирует элементы по вертикали */
+  gap: 20px;
+  /* Расстояние между ссылками */
+  flex: 1;
+  /* Занимает всю ширину */
+}
+
+
+
+.sale a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+
+}
+
+.underline-btn {
+
+  font-family: 'poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 2px solid white;
+  /* Подчеркивание снизу */
+
+  color: white;
+  cursor: pointer;
+
+  /* Отступ для линии */
+}
+
+
+
+
+/* Стили для выпадающего меню */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding-right: 141px;
+
+
+  /* Центрирует элементы по вертикали */
+
+
+
+
+}
+
+.dropdown button,
+.dropdown button img {
+  border: none;
+  background-color: black;
+  color: white;
+  padding-left: 11px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 10px;
+
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.Content {
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  width: 1170px;
+  /* Занимает всю ширину */
+  margin-right: 51px;
+  margin-left: 135px;
+  /* Высота блока */
+  background-color: white;
+  /* Цвет фона */
+
+
+}
+
+.navbar {
+
+  width: 100%;
+  height: 38px;
+  background-color: white;
+  /* Цвет фона */
+  padding: 10px 20px;
+  /* Внутренние отступы */
+  display: flex;
+  /* Используем flexbox */
+  justify-content: space-between;
+  /* Разделяем элементы по краям */
+  align-items: center;
+  /* Центрируем элементы по вертикали */
+  margin-top: 25px;
+  /* Отступ сверху */
+
+  /* Центрируем блок по горизонтали */
+
+  /* Линия снизу */
+  padding-bottom: 19px;
+  /* Отступ от содержимого до линии */
+
+}
+
+.navbar .logo h2 {
+  font-size: 24px;
+  /* Размер текста логотипа */
+  font-weight: bold;
+  color: #333;
+  /* Цвет текста */
+}
+
+.navbar ul {
+  list-style: none;
+  /* Убираем маркеры списка */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  /* Располагаем элементы в строку */
+  gap: 48px;
+  /* Расстояние между пунктами меню */
+
+}
+
+.navbar ul li {
+  position: relative;
+  /* Позволяет использовать абсолютное позиционирование для выпадающего меню */
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  /* Убираем подчеркивание */
+  color: #333;
+  /* Цвет текста */
+  font-size: 16px;
+  /* Размер текста */
+  font-weight: 50px;
+  display: flex;
+  transition: color 0.3s;
+  /* Плавный переход при наведении */
+}
+
+.navbar ul li a:hover {
+  color: #007BFF;
+  /* Цвет текста при наведении */
+  text-decoration: underline;
+  gap: 48px;
+}
+
+.search {
+  display: flex;
+  /* Используем flexbox */
+  align-items: center;
+  /* Центрируем элементы по вертикали */
+
+  /* Расстояние между полем ввода и кнопкой */
+
+}
+
+.search input {
+  border: none;
+  width: 200px;
+  /* Ширина поля ввода */
+  height: 38px;
+
+  /* Внутренние отступы */
+  padding: 0px 0 0 20px;
+  background-color: #f5f5f5;
+  font-size: 12px;
+  /* Размер текста */
+  margin-left: 100px;
+}
+
+.search button {
+  background-color: #f5f5f5;
+  width: 38px;
+  /* Размер иконки */
+  height: 38px;
+  border: none;
+
+  cursor: pointer;
+}
+
+.search button img {
+  width: 24px;
+  /* Размер иконки */
+  height: 24px;
+  background-color: #f5f5f5;
+  padding: 1px;
+  /* Центрируем иконку внутри кнопки */
+
+}
+
+.heard {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  /* Используем flexbox */
+  align-items: center;
+  /* Центрируем элементы по вертикали */
+  justify-content: center;
+  position: relative;
+  margin-left: 20px;
+  padding: 0;
+  z-index: 1;
+}
+
+
+
+.eard img {
+  display: flex;
+  /* Используем flexbox */
+  align-items: center;
+  /* Центрируем элементы по вертикали */
+  justify-content: center;
+  width: 25px;
+  height: 30px;
+  /* Расстояние между элементами */
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+}
+
+.cart {
+
+  display: flex;
+  /* Используем flexbox */
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  /* Центрируем элементы по вертикали */
+  justify-content: center;
+  position: relative;
+  margin-left: 20px;
+  padding: 0;
+  z-index: 1;
+
+}
+
+
+
+.art img {
+
+  display: flex;
+  /* Используем flexbox */
+  align-items: center;
+  /* Центрируем элементы по вертикали */
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  /* Расстояние между элементами */
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+}
+
+.cart span {
+  font-size: 14px;
+  /* Размер текста */
+  position: absolute;
+  top: -5px;
+  /* Смещение вверх */
+  right: -5px;
+  /* Смещение вправо */
+  background-color: red;
+  /* Цвет фона счетчика */
+  color: white;
+  /* Цвет текста */
+  font-size: 12px;
+  /* Размер текста */
+  font-weight: bold;
+  border-radius: 50%;
+  /* Круглая форма */
+  width: 15px;
+  /* Ширина счетчика */
+  height: 15px;
+  /* Высота счетчика */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Центрирование текста внутри */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  /* Легкая тень */
+  z-index: 2;
+  /* Поверх других элементов */
+}
+
+.heard span {
+  font-size: 14px;
+  /* Размер текста */
+  position: absolute;
+  top: -5px;
+  /* Смещение вверх */
+  right: -5px;
+  /* Смещение вправо */
+  background-color: red;
+  /* Цвет фона счетчика */
+  color: white;
+  /* Цвет текста */
+  font-size: 12px;
+  /* Размер текста */
+  font-weight: bold;
+  border-radius: 50%;
+  /* Круглая форма */
+  width: 15px;
+  /* Ширина счетчика */
+  height: 15px;
+  /* Высота счетчика */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Центрирование текста внутри */
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  /* Легкая тень */
+  z-index: 2;
+  /* Поверх других элементов */
+}
+
+.list {
+  display: flex;
+  /* Используем flexbox */
+  margin-left: 135px;
+  width: 1170px;
+  /* Занимает всю ширину */
+
+  /* Высота блока */
+
+}
+
+.list-conteiner {
+  border-right: #ccc solid 1px;
+  width: 217px;
+  height: 344px;
+
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+
+}
+
+.list ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 40px;
+  list-style: none;
+  justify-content: center;
+}
+
+.slider {
+  position: relative;
+  width: 980px;
+  height: 419px;
+  display: flex;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 110%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+
+}
+
+.dots {
+  display: flex;
+  margin-left: 479px;
+  margin-top: 379px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: red;
+  /* Цвет активной точки */
+}
+
+.img-conteiner {
+  background-color: black;
+  width: 980px;
+  height: 419px;
+  display: flex;
+  margin-left: 41px;
+  margin-top: 40px;
+
+
+}
+
+.apple {
+  display: flex;
+  color: white;
+  width: 190px;
+  height: 49px;
+
+
+
+
+  /* Цвет фона */
+}
+
+.apple img {
+  width: 40px;
+  height: 49px;
+  padding: 0px;
+  margin-right: 14px;
+}
+
+.apple h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: white;
+  padding-top: 10px;
+
+
+}
+
+.img-conteiner h2 {
+  display: block;
+  width: 294px;
+  height: 120px;
+  font-weight: 400;
+  font-size: 48px;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 22px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 58px;
+  margin-left: 64px;
+}
+
+.Shop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 113px;
+  height: 28px;
+  gap: 10px;
+
+}
+
+.Shop a {
+
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  list-style: none;
+  text-underline-offset: 8px;
+
+  text-decoration-color: #ccc;
+  text-decoration-thickness: 1px;
+  cursor: pointer;
+}
+
+.Hero {
+  display: flex;
+  width: 496px;
+  height: 352px;
+  margin-top: 20px;
+}
+
+.carusel {
+  overflow: hidden;
+  width: 1170px;
+  height: 525px;
+  margin-left: 135px;
+  margin-top: 65px;
+}
+
+.time-conteiner {
+  display: flex;
+  width: 1170px;
+  height: 103px;
+
+}
+
+.slide-carusel-btn {
+  display: flex;
+  width: 100px;
+  height: 46px;
+  justify-content: space-between;
+  margin-left: 470px;
+  margin-top: 57px;
+}
+
+.slide-carusel-btn button {
+  width: 46px;
+  height: 46px;
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+
+
+}
+
+.slide-carusel-btn img {
+  width: 16px;
+  height: 14px;
+
+}
+
+.carusel-conteiner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  height: 350px;
+  margin-top: 40px;
+}
+
+.Today-conteiner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 40px;
+
+}
+
+.Today {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: red;
+  font-size: 16px;
+  font-weight: 600;
+  width: 64px;
+  height: 20px;
+  margin-left: 20px;
+
+
+}
+
+.red-bord {
+  background-color: red;
+  border-radius: 5px;
+  width: 20px;
+  height: 40px;
+}
+
+.Flash-Sales {
+  width: 211px;
+  height: 103px;
+
+}
+
+.Flash-Sales h2 {
+  font-size: 36px;
+  font-weight: 600;
+  display: flex;
+  color: black;
+
+  margin-top: 24px;
+}
+
+.countdown-timer {
+  display: flex;
+  width: 302px;
+  height: 50px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  gap: 16px;
+  margin-left: 87px;
+  margin-top: 53px;
+}
+
+.countdown-timer h4 {
+  font-size: 12px;
+  font-weight: 400;
+  color: black;
+
+}
+
+.countdown-timer span {
+  display: flex;
+
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 32px;
+  color: black;
+  gap: 5px;
+}
+
+.countdown-timer .Time {
+  width: 46px;
+  height: 50px;
+  padding-left: 5px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-timer .separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carusel-item-conteiner {
+  flex: 0 0 25%;
+  /* Каждый слайд занимает 25% ширины контейнера */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  width: 270px;
+  height: 350px;
+
+
+}
+
+.carusel-item-conteiner:nth-child(-n+4) {
+  position: relative;
+  /* Первые 4 слайда остаются на месте */
+  z-index: 1;
+}
+
+.carusel-item-conteiner:nth-child(n+5) {
+  position: relative;
+  z-index: 0;
+}
+
+.carusel-item-conteiner.active {
+  transform: scale(1.1);
+  /* Увеличение текущего слайда */
+  z-index: 2;
+}
+
+.carusel-item {
+  width: 270px;
+  height: 250px;
+  background-color: #ccc;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.carusel-item-conteiner.active .carusel-item img {
+  transform: scale(1.1);
+}
+
+.Discount {
+  display: flex;
+  top: 12px;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 26px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  border-radius: 5px;
+  position: absolute;
+  margin-left: 12px;
+}
+
+.carusel-item a {
+
+  width: 270px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.add-to-cart1 img {
+  width: 16px;
+  height: 14px;
+  /* Размер иконки */
+
+}
+
+.add-to-cart1.active {
+  transform: scale(1.1);
+  /* Увеличение кнопки при активации */
+  opacity: 1;
+  /* Показываем кнопку */
+}
+
+.add-to-cart1 img {
+  transition: filter 0.3s ease;
+}
+
+.add-to-cart1.active img {
+  filter: brightness(0) invert(1);
+  /* Белый цвет SVG */
+}
+
+.carusel-btn {
+  width: 34px;
+  height: 76px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  top: 12px;
+  margin-left: 224px;
+
+
+}
+
+.carusel-btn button {
+  width: 34px;
+  height: 34px;
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Плавный переход */
+
+}
+
+button.active {
+  background-color: red;
+  /* Цвет кнопки в активном состоянии */
+  color: white;
+  /* Цвет текста или иконки */
+  border: none;
+  /* Убираем границу */
+}
+
+.old-price {
+  font-family: 'poppins', sans-serif;
+  text-decoration: line-through;
+  /* Перечёркивание текста */
+  color: gray;
+  /* Цвет старой цены */
+  margin-left: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  /* Размер шрифта */
+}
+
+.new-price {
+  color: red;
+  /* Цвет новой цены */
+  font-weight: 500;
+  /* Жирный текст */
+  font-size: 16px;
+  /* Размер шрифта */
+}
+
+.Star {
+  display: flex;
+  align-items: center;
+
+}
+
+.Star h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+  margin-left: 8px;
+}
+
+.add-to-cart {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 100%;
+  height: 41px;
+  transform: translateX(-50%);
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+
+.carusel-item-conteiner.active .add-to-cart {
+  opacity: 1;
+  /* Показываем кнопку только на активном слайде */
+}
+
+.All-Products {
+  width: 1170px;
+  height: 56px;
+  border-bottom: black solid 0.5px;
+  margin-bottom: 12px;
+  padding-bottom: 60px;
+  margin-left: 135px;
+}
+
+.All-Products button {
+  display: flex;
+  background-color: red;
+  color: white;
+  width: 234px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 468px;
+  border-radius: 5px;
+  border: none;
+
+}
+
+.Categories {
+  display: flex;
+  width: 1170px;
+  height: 313px;
+  margin-left: 135px;
+  flex-direction: column;
+  margin-top: 80px;
+
+}
+
+.Categories-conteiner {
+  display: flex;
+  width: 1170px;
+  height: 108px;
+
+}
+
+.cartegories-bord {
+  display: flex;
+  width: 379px;
+  height: 108px;
+  flex-direction: column;
+
+}
+
+.cartegories-bord h3 {
+  width: 89px;
+  height: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: red;
+  margin-left: 16px;
+
+}
+
+.cartegories-bord h2 {
+  display: flex;
+  width: 379px;
+  height: 48px;
+  font-size: 36px;
+  font-weight: 600;
+  color: black;
+  margin-top: 20px;
+}
+
+.slide-categori-btn {
+  display: flex;
+  width: 100px;
+  height: 46px;
+  justify-content: space-between;
+  margin-left: 691px;
+  margin-top: 62px;
+
+}
+
+.slide-categori-btn button {
+  width: 46px;
+  height: 46px;
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.categories-item img {
+  width: 16px;
+  height: 14px;
+  margin-bottom: 16px;
+
+}
+
+.Categories-img {
+  display: flex;
+  align-items: center;
+  width: 1170px;
+  height: 145px;
+  margin-top: 60px;
+  margin-bottom: 75px;
+  position: relative;
+  border-bottom: black solid 0.5px;
+  padding-bottom: 70px;
+  ;
+}
+
+.categories-slides {
+  display: flex;
+  width: 1170px;
+  height: 145px;
+  transition: transform 0.5s ease-in-out;
+  /* Плавное переключение слайдов */
+}
+
+.categories-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 145px;
+  margin-right: 30px;
+  /* Расстояние между слайдами */
+}
+
+/* Стиль кнопки по умолчанию */
+.categories-item {
+  display: flex;
+  width: 170px;
+  height: 145px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Стиль SVG по умолчанию */
+.categories-item img {
+  width: 56px;
+  height: 56px;
+  fill: black;
+  /* Цвет иконки */
+  transition: filter 0.3s ease;
+}
+
+/* Активное состояние кнопки */
+.categories-item.active {
+  background-color: red;
+  color: white;
+  transform: scale(1.1);
+  /* Увеличение кнопки */
+}
+
+/* Активное состояние SVG */
+.categories-item.active img {
+  filter: brightness(0) invert(1);
+  /* Меняем цвет иконки на белый */
+}
+
+
+
+.Best-Products {
+  display: flex;
+  flex-direction: column;
+  width: 1170px;
+  height: 537px;
+  margin-top: 140px;
+  margin-left: 135px;
+
+
+}
+
+.Best-Products-conteiner {
+  display: flex;
+  width: 1170px;
+  height: 108px;
+
+
+}
+
+.Best-Sales {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 108px;
+  margin: 0px 0px 0px 0px;
+
+}
+
+.Best-Sales h2 {
+  width: 400px;
+  height: 48px;
+  font-size: 36px;
+  font-weight: 600;
+  color: black;
+  margin-top: 20px;
+
+}
+
+.Mount-conteiner {
+  display: flex;
+  width: 125px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.Best-Products-conteiner h3 {
+  width: 89px;
+  height: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: red;
+  margin-left: 16px;
+}
+
+.Best-Products-conteiner button {
+  width: 159px;
+  height: 56px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  background-color: red;
+  margin-left: 611px;
+  border-radius: 5px;
+  margin-top: 52px;
+  border: none;
+
+}
+
+.BP-img {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+
+}
+
+.best-item-conteiner {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.best-item {
+  width: 270px;
+  height: 250px;
+  background-color: #ccc;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+
+}
+
+.best-item a {
+  width: 270px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+
+}
+
+.best-item img {
+  transition: transform 0.3s ease;
+  /* Плавное увеличение */
+}
+
+.best-item:hover img {
+  transform: scale(1.1);
+  /* Увеличение картинки */
+}
+
+.best-item .add-to-cart {
+  position: absolute;
+
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  /* Плавное появление кнопки */
+}
+
+.best-item:hover .add-to-cart {
+  opacity: 1;
+  /* Показываем кнопку при наведении */
+}
+
+.best-Star {
+  display: flex;
+  width: 100px;
+  height: 20px;
+}
+
+.best-Star h3 {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+  margin-left: 8px;
+}
+
+.music-box {
+  display: flex;
+  width: 1170px;
+  height: 500px;
+  background-color: black;
+  margin-left: 135px;
+  margin-top: 60px;
+  position: relative;
+  color: white;
+
+}
+
+.music-conteiner {
+  display: flex;
+  flex-direction: column;
+  margin-left: 56px;
+  margin-top: 69px;
+  gap: 32px;
+}
+
+.music-conteiner img {
+  display: flex;
+  width: 568px;
+  height: 338px;
+  position: absolute;
+  top: 82px;
+  left: 542px;
+  filter: drop-shadow(100px 100px 100px rgba(244, 239, 239, 0.5));
+  /* Помещаем изображение на задний план */
+}
+
+.music-conteiner h5 {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(53, 236, 53);
+}
+
+.music-conteiner h3 {
+  width: 443px;
+  height: 120px;
+  font-size: 48px;
+  font-weight: 600;
+
+}
+
+/* Таймер */
+.timer {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+/* Кружки времени */
+.time-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  background-color: rgba(255, 255, 255, 0.737);
+  border-radius: 50%;
+
+}
+
+/* Значения времени */
+.time-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: red;
+}
+
+/* Метки времени */
+.time-label {
+  font-family: 'poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: greenyellow;
+}
+
+.music-conteiner button {
+  width: 171px;
+  height: 56px;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  background-color: rgb(56, 225, 56);
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.Our-Products {
+  display: flex;
+  width: 1170px;
+  height: 900px;
+  margin-left: 135px;
+  margin-top: 60px;
+  flex-direction: column;
+
+
+}
+
+.our-Products-conteiner {
+  display: flex;
+  width: 1170px;
+  height: 108px;
+
+
+}
+
+.our-conteiner {
+  display: flex;
+  width: 142px;
+  height: 40px;
+}
+
+.Our {
+  display: flex;
+  font-size: 14px;
+  font-weight: 600;
+  color: red;
+  margin-left: 16px;
+  align-items: center;
+
+
+}
+
+
+.Our-Products-btn {
+  display: flex;
+  width: 100px;
+  height: 46px;
+  margin-top: 62px;
+  margin-left: 672px;
+
+}
+
+.Our-Products-btn button {
+  width: 46px;
+  height: 46px;
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.our-slider {
+
+  transition: transform 0.5s ease-in-out;
+  max-width: 1170px;
+  height: 732px;
+  margin-top: 40px;
+
+
+}
+
+.our-slides-conteiner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease-in-out;
+  /* Плавное переключение слайдов */
+  width: 100%;
+  gap: 30px;
+
+}
+
+.our-slides-conteiner2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+}
+
+
+
+.our-products-slides {
+  display: flex;
+  width: 270px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 350px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+
+}
+
+.our-products-item.add-to-cart {
+  opacity: 0.5;
+  /* Кнопка скрыта по умолчанию */
+  transition: opacity 0.3s ease;
+  /* Плавное появление */
+}
+
+.our-products-slides.active .add-to-cart {
+  opacity: 1;
+  /* Показываем кнопку, если слайд активен */
+}
+
+.our-products-slides.active {
+  transform: scale(1.1);
+  /* Увеличение активного слайда */
+
+  z-index: 2;
+  /* Поверх других слайдов */
+}
+
+.our-products-item {
+  width: 270px;
+  height: 250px;
+  background-color: #ccc;
+  position: relative;
+  display: flex;
+}
+
+.our-products-item a {
+  width: 270px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.View-All-Products {
+  display: flex;
+  align-items: center;
+
+
+}
