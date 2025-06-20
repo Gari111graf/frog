@@ -1377,8 +1377,6 @@ button.active {
 .our-products-slides {
   display: flex;
   width: 270px;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
   height: 350px;
   transition: transform 0.3s ease, opacity 0.3s ease;
@@ -1405,6 +1403,21 @@ button.active {
   /* Поверх других слайдов */
 }
 
+.New {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 51px;
+  height: 26px;
+  position: absolute;
+  z-index: 1;
+  background-color: greenyellow;
+  border-radius: 10%;
+  margin-left: 12px;
+  margin-top: 12px;
+  color: white;
+}
+
 .our-products-item,
 .our-products-item1,
 .our-products-item2,
@@ -1415,6 +1428,7 @@ button.active {
   background-color: #ccc;
   position: relative;
   display: flex;
+  position: relative;
 }
 
 .our-products-item,
@@ -1427,6 +1441,19 @@ button.active {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.our-products-item1:hover .add-to-cart,
+.our-products-item2:hover .add-to-cart,
+.our-products-item3:hover .add-to-cart,
+.our-products-item4:hover .add-to-cart {
+  opacity: 1;
+}
+
+/* Стили кнопки при нажатии */
+.add-to-cart.active {
+  background-color: black;
+  color: white;
 }
 
 .Color-product1 div,
